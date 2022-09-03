@@ -1,0 +1,15 @@
+name: main branch jobs
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  staging:
+    environment: staging
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Lint"
+      - run: echo "Build"
+      - run: echo "Test"
+      - run: echo "Publish"
+      - run: echo "Deploy"    
